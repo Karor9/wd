@@ -6,5 +6,10 @@ class Ciag:
         for x in range (0, len(self.wartosci)):
             print(self.wartosci[x], end= " ")
 
+    def pobierz_elementy(self, wartosci):
+        self.wartosci = wartosci
+
+    def
 c1 = Ciag([1, 2, 3, 4, 5, 6])
 c1.wyswietl_dane()
+c1
