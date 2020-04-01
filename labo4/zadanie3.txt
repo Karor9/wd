@@ -1,0 +1,4 @@
+To jest linia numer 1
+To jest linia numer 2
+To jest linia numer 3
+To jest linia numer 4
