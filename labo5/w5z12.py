@@ -1,0 +1,12 @@
+miesiac = (miesiac for miesiac in ["styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"])
+
+print(next(miesiac))
+print(next(miesiac))
+print(next(miesiac))
+print(next(miesiac))
+print(next(miesiac)) 
+print(next(miesiac))
+print(next(miesiac))
+print(next(miesiac))
+print(next(miesiac))
+print(next(miesiac)) 
