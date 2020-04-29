@@ -19,6 +19,9 @@ def podpunkt4(df):
 def podpunkt5(df):
     print(df.groupby(['Plec']).agg({'Liczba':['sum']}))
 
+def podpunkt6(df):
+    x = df.groupby(['Rok', 'Plec']).agg({'Liczba':[max]})
+
 data = pd.ExcelFile('labo8/dataset/imiona.xlsx')
 df = pd.read_excel(data, 'Arkusz1')
 
@@ -26,8 +29,8 @@ df = pd.read_excel(data, 'Arkusz1')
 #podpunkt2(df, "karol")
 #podpunkt3(df)
 #podpunkt4(df)
-
-
+#podpunkt5(df)
+podpunkt6(df)
 
 #
-#print(str(df.groupby(['Rok']).agg({'Liczba':[max]})))
+#
