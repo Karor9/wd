@@ -20,7 +20,12 @@ def podpunkt5(df):
     print(df.groupby(['Plec']).agg({'Liczba':['sum']}))
 
 def podpunkt6(df):
-    x = df.groupby(['Rok', 'Plec']).agg({'Liczba':[max]})
+    idx = df.groupby(['Rok', 'Plec'])['Liczba'].transform(max) == df['Liczba']
+    print(df[idx])
+
+def podpunkt7(df):
+    idx = df.groupby(['Plec'])['Liczba'].transform(max) == df['Liczba']
+    print(df[idx])
 
 data = pd.ExcelFile('labo8/dataset/imiona.xlsx')
 df = pd.read_excel(data, 'Arkusz1')
@@ -30,7 +35,8 @@ df = pd.read_excel(data, 'Arkusz1')
 #podpunkt3(df)
 #podpunkt4(df)
 #podpunkt5(df)
-podpunkt6(df)
+#podpunkt6(df)
+#podpunkt7(df)
 
 #
 #
