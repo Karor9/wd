@@ -2,6 +2,12 @@
 __pycache__/
 *.py[cod]
 *$py.class
+fl.XDPVP
+horse.ico
+test.py
+test2.py
+test3.py
+operadriver.exe
 
 # C extensions
 *.so
@@ -111,6 +117,9 @@ celerybeat.pid
 env/
 venv/
 ENV/
+myEnv/
+.myEnv
+myEnv.bak/
 env.bak/
 venv.bak/
 
@@ -137,3 +146,4 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+chromedriver.exe
