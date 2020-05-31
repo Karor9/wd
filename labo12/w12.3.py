@@ -15,6 +15,8 @@ table_div = page.get_element_by_id('collection')
 # należy pamiętać (lub sprawdzić) to, że zostanie zwrócona lista odnalezionych elementów dokumentu, stąd index [0] aby zwrócić bezpośrednio ten element a nie całą listę
 table = table_div.xpath('./*[@class="table-responsive"]/table')[0]
 
+print(table)
+
 # kolejna informacja jest taka, że większość (ale nie wszystkie) nagłówków jest w formie łącza (znacznik <a>), trzeba więc wyłuskać z niego tekst
 headers = [label for label in table.xpath('.//th')]
 reszta = [label for label in table.xpath('//tr/td')]
@@ -51,4 +53,6 @@ for x in range(0, np.size(s, 0)):
     s[x][0] = anchor[x]
 
 df = pd.DataFrame(s, columns=c)
-print(df)
+df = df.astype({'Num Voters': int})
+sortowane = df.sort_values(by='Num Voters', ascending=False)
+print(sortowane[0:10])
