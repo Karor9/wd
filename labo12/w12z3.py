@@ -2,6 +2,8 @@ from lxml import html
 import requests
 import pandas as pd
 import numpy as np 
+import matplotlib.pyplot as plt
+
 url = "https://boardgamegeek.com/browse/boardgame"
 data = requests.get(url)
 
@@ -56,3 +58,8 @@ df = pd.DataFrame(s, columns=c)
 df = df.astype({'Num Voters': int})
 sortowane = df.sort_values(by='Num Voters', ascending=False)
 print(sortowane[0:10])
+
+dane = sortowane[0:10]
+wykres = dane['Num Voters'].plot.bar()
+wykres.set_xticklabels(dane['Title'])
+plt.show()
